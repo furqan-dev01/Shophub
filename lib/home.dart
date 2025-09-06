@@ -265,8 +265,8 @@ class _HomePageState extends State<HomePage> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF8B5CF6),
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 20, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
@@ -655,7 +655,8 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: EdgeInsets.all(40.0),
                     child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF8B5CF6)),
+                      valueColor:
+                          AlwaysStoppedAnimation<Color>(Color(0xFF8B5CF6)),
                     ),
                   ),
                 );
@@ -736,7 +737,7 @@ class _HomePageState extends State<HomePage> {
 
               return LayoutBuilder(
                 builder: (context, constraints) {
-              final availableWidth = constraints.maxWidth;
+                  final availableWidth = constraints.maxWidth;
 
                   // Determine layout based on screen size
                   if (availableWidth < 600) {
@@ -761,7 +762,8 @@ class _HomePageState extends State<HomePage> {
                       runSpacing: 20,
                       children: products.map((product) {
                         return SizedBox(
-                          width: (availableWidth - 40) / 3, // Three cards per row
+                          width:
+                              (availableWidth - 40) / 3, // Three cards per row
                           child: ProductCard(
                             product: product,
                             onAddToCart: () => _handleAddToCart(product),
@@ -776,7 +778,8 @@ class _HomePageState extends State<HomePage> {
                       runSpacing: 20,
                       children: products.map((product) {
                         return SizedBox(
-                          width: (availableWidth - 60) / 4, // Four cards per row
+                          width:
+                              (availableWidth - 60) / 4, // Four cards per row
                           child: ProductCard(
                             product: product,
                             onAddToCart: () => _handleAddToCart(product),

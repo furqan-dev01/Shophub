@@ -18,12 +18,12 @@ class ProductCard extends StatelessWidget {
         minWidth: 200,
         maxWidth: 320,
       ),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
-            color: Colors.black.withOpacity(0.08),
+            color: Colors.black,
             blurRadius: 20,
             offset: const Offset(0, 4),
           ),
