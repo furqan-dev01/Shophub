@@ -26,7 +26,7 @@ class ProductService {
         return Product.fromMap(doc.data(), doc.id);
       }).toList();
     } catch (e) {
-      print('Error fetching products: $e');
+      // Error fetching products: $e
       return [];
     }
   }
@@ -78,7 +78,7 @@ class ProductService {
     try {
       await _firestore.collection(_collectionName).add(product.toMap());
     } catch (e) {
-      print('Error adding product: $e');
+      // Error adding product: $e
       rethrow;
     }
   }
@@ -88,7 +88,7 @@ class ProductService {
     try {
       await _firestore.collection(_collectionName).doc(productId).update(product.toMap());
     } catch (e) {
-      print('Error updating product: $e');
+      // Error updating product: $e
       rethrow;
     }
   }
@@ -98,7 +98,7 @@ class ProductService {
     try {
       await _firestore.collection(_collectionName).doc(productId).delete();
     } catch (e) {
-      print('Error deleting product: $e');
+      // Error deleting product: $e
       rethrow;
     }
   }

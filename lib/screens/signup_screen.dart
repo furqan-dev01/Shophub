@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'login_screen.dart';
@@ -139,7 +140,7 @@ class _SignupScreenState extends State<SignupScreen> {
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
+                  color: Colors.black.withValues(alpha: 0.1),
                   blurRadius: 20,
                   offset: const Offset(0, 4),
                 ),
@@ -389,7 +390,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent,
                       disabledBackgroundColor:
-                          const Color(0xFFD1D5DB).withOpacity(0.5),
+                          const Color(0xFFD1D5DB).withValues(alpha: 0.5),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
