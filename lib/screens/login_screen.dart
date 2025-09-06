@@ -44,8 +44,8 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 // Header
                 Column(
-                  children: [
-                    const Text(
+                  children: const [
+                    Text(
                       'Welcome Back',
                       style: TextStyle(
                         fontSize: 32,
@@ -53,8 +53,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Color(0xFF8B5CF6),
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    const Text(
+                    SizedBox(height: 8),
+                    Text(
                       'Sign in to your account to continue shopping',
                       style: TextStyle(
                         fontSize: 16,
