@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 // Header
-                Column(
+                const Column(
                   children: <Widget>[
                     Text(
                       'Welcome Back',
