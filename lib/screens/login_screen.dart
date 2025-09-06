@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 // Header
                 Column(
-                  children: [
+                  children: <Widget>[
                     Text(
                       'Welcome Back',
                       style: TextStyle(

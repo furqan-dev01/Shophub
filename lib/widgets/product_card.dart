@@ -23,9 +23,9 @@ class ProductCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: const [
           BoxShadow(
-            color: Colors.black,
-            blurRadius: 20,
+            color: Color(0x1F000000),
             offset: Offset(0, 4),
+            blurRadius: 20,
           ),
         ],
       ),
@@ -216,7 +216,7 @@ class ProductCard extends StatelessWidget {
       child: Center(
         child: Icon(
           _getProductIcon(),
-          size: 50,
+          size: 24,
           color: const Color(0xFF8B5CF6),
         ),
       ),

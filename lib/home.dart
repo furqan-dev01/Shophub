@@ -700,18 +700,18 @@ class _HomePageState extends State<HomePage> {
               }
 
               if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return Center(
+                return const Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(40.0),
+                    padding: EdgeInsets.all(40.0),
                     child: Column(
-                      children: [
-                        const Icon(
+                      children: <Widget>[
+                        Icon(
                           Icons.inventory_2_outlined,
                           size: 64,
                           color: Color(0xFF9CA3AF),
                         ),
-                        const SizedBox(height: 16),
-                        const Text(
+                        SizedBox(height: 16),
+                        Text(
                           'No products available',
                           style: TextStyle(
                             fontSize: 18,
@@ -719,8 +719,8 @@ class _HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        const SizedBox(height: 8),
-                        const Text(
+                        SizedBox(height: 8),
+                        Text(
                           'Check back later for new products!',
                           style: TextStyle(
                             fontSize: 14,
