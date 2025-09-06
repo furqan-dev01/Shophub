@@ -178,7 +178,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ] else ...[
               // Empty space when not logged in
-              Expanded(child: const SizedBox()),
+              const Expanded(child: SizedBox()),
+              //Expanded(child: const SizedBox()),
             ],
 
             // Right section - Conditional buttons based on login status
