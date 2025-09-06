@@ -68,7 +68,7 @@ dev_dependencies:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/YOUR_USERNAME/shophub.git
    cd shophub
    ```
 
@@ -81,6 +81,7 @@ dev_dependencies:
    - Create a new Firebase project at [Firebase Console](https://console.firebase.google.com/)
    - Enable Authentication (Email/Password)
    - Enable Firestore Database
+   - Download `google-services.json` (Android) and `GoogleService-Info.plist` (iOS)
    - Place them in the appropriate platform folders
 
 4. **Configure Firebase**
@@ -91,6 +92,37 @@ dev_dependencies:
    ```bash
    flutter run
    ```
+
+## 🌐 GitHub Deployment
+
+### Deploy to GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages:
+
+1. **Enable GitHub Pages**
+   - Go to your repository Settings
+   - Navigate to Pages section
+   - Select "GitHub Actions" as source
+
+2. **Automatic Deployment**
+   - Push to `main` branch triggers automatic deployment
+   - Web app will be available at: `https://YOUR_USERNAME.github.io/shophub/`
+
+3. **Manual Deployment**
+   ```bash
+   # Build for web
+   flutter build web --release --base-href="/shophub/"
+   
+   # Deploy to GitHub Pages
+   # (Automatically handled by GitHub Actions)
+   ```
+
+### GitHub Actions
+
+The project includes CI/CD workflows:
+- **CI Pipeline**: Runs tests and code analysis on every push/PR
+- **Web Deployment**: Automatically deploys to GitHub Pages
+- **Build Artifacts**: Generates APK and web build artifacts
 
 ## 🗂️ Project Structure
 
@@ -164,6 +196,30 @@ The app automatically adapts to different screen sizes:
 - **Login Verification**: Users must be logged in to add items to cart
 - **Visual Feedback**: Success/error messages for cart actions
 - **Quick Login**: Direct login access from cart prompts
+
+## 🚀 Deployment
+
+### GitHub Pages (Web)
+The project automatically deploys to GitHub Pages when you push to the main branch.
+
+**Live Demo**: [https://YOUR_USERNAME.github.io/shophub/](https://YOUR_USERNAME.github.io/shophub/)
+
+### Manual Deployment
+
+#### Android
+```bash
+flutter build apk --release
+```
+
+#### iOS
+```bash
+flutter build ios --release
+```
+
+#### Web
+```bash
+flutter build web --release --base-href="/shophub/"
+```
 
 ## 🐛 Troubleshooting
 
