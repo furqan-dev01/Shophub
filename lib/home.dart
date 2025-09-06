@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -358,8 +358,8 @@ class _HomePageState extends State<HomePage> {
                         boxShadow: [
                           BoxShadow(
                             color: _isSearchFocused
-                                ? const Color(0xFF8B5CF6).withValues(alpha: 0.2)
-                                : Colors.black.withValues(alpha: 0.05),
+                                ? const Color(0xFF8B5CF6).withOpacity(0.2)
+                                : Colors.black.withOpacity(0.05),
                             blurRadius: 10,
                             offset: const Offset(0, 2),
                           ),
@@ -463,8 +463,8 @@ class _HomePageState extends State<HomePage> {
                               boxShadow: [
                                 BoxShadow(
                                   color: _isSearchFocused
-                                      ? const Color(0xFF8B5CF6).withValues(alpha: 0.2)
-                                      : Colors.black.withValues(alpha: 0.05),
+                                      ? const Color(0xFF8B5CF6).withOpacity(0.2)
+                                      : Colors.black.withOpacity(0.05),
                                   blurRadius: 10,
                                   offset: const Offset(0, 2),
                                 ),
@@ -521,7 +521,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(12),
                             boxShadow: [
                               BoxShadow(
-                                color: const Color(0xFF8B5CF6).withValues(alpha: 0.3),
+                                color: const Color(0xFF8B5CF6).withOpacity(0.3),
                                 blurRadius: 10,
                                 offset: const Offset(0, 2),
                               ),
