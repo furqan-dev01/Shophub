@@ -666,31 +666,31 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: const EdgeInsets.all(40.0),
                     child: Column(
-                      children: const [
-                        Icon(
+                      children: [
+                        const Icon(
                           Icons.error_outline,
                           size: 64,
                           color: Color(0xFF9CA3AF),
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         Text(
-                          'Error loading products:  {snapshot.error}',
-                          style: TextStyle(
+                          'Error loading products:  ${snapshot.error}',
+                          style: const TextStyle(
                             fontSize: 16,
                             color: Color(0xFF9CA3AF),
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         ElevatedButton(
                           onPressed: () {
                             setState(() {}); // Refresh the stream
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFF8B5CF6),
+                            backgroundColor: const Color(0xFF8B5CF6),
                             foregroundColor: Colors.white,
                           ),
-                          child: Text('Retry'),
+                          child: const Text('Retry'),
                         ),
                       ],
                     ),
@@ -703,14 +703,14 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: const EdgeInsets.all(40.0),
                     child: Column(
-                      children: const [
-                        Icon(
+                      children: [
+                        const Icon(
                           Icons.inventory_2_outlined,
                           size: 64,
                           color: Color(0xFF9CA3AF),
                         ),
-                        SizedBox(height: 16),
-                        Text(
+                        const SizedBox(height: 16),
+                        const Text(
                           'No products available',
                           style: TextStyle(
                             fontSize: 18,
@@ -718,8 +718,8 @@ class _HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        SizedBox(height: 8),
-                        Text(
+                        const SizedBox(height: 8),
+                        const Text(
                           'Check back later for new products!',
                           style: TextStyle(
                             fontSize: 14,
