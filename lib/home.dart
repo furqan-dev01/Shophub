@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => LoginScreen(),
+                  builder: (context) => const LoginScreen(),
                 ),
               );
             },
@@ -158,7 +158,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         TextSpan(
                           text: 'Welcome back! ',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF8B5CF6),
@@ -166,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         TextSpan(
                           text: user.email ?? 'User',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 20,
                             color: Colors.black,
                           ),
@@ -178,7 +178,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ] else ...[
               // Empty space when not logged in
-              Expanded(child: SizedBox()),
+              Expanded(child: const SizedBox()),
             ],
 
             // Right section - Conditional buttons based on login status
@@ -191,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
+                          builder: (context) => const LoginScreen(),
                         ),
                       );
                     },
@@ -247,7 +247,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePage(),
+                          builder: (context) => const HomePage(),
                         ),
                       );
                     }
@@ -666,22 +666,22 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: const EdgeInsets.all(40.0),
                     child: Column(
-                      children: [
-                        const Icon(
+                      children: const [
+                        Icon(
                           Icons.error_outline,
                           size: 64,
                           color: Color(0xFF9CA3AF),
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16),
                         Text(
-                          'Error loading products: ${snapshot.error}',
-                          style: const TextStyle(
+                          'Error loading products:  {snapshot.error}',
+                          style: TextStyle(
                             fontSize: 16,
                             color: Color(0xFF9CA3AF),
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16),
                         ElevatedButton(
                           onPressed: () {
                             setState(() {}); // Refresh the stream
@@ -703,14 +703,14 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: const EdgeInsets.all(40.0),
                     child: Column(
-                      children: [
-                        const Icon(
+                      children: const [
+                        Icon(
                           Icons.inventory_2_outlined,
                           size: 64,
                           color: Color(0xFF9CA3AF),
                         ),
-                        const SizedBox(height: 16),
-                        const Text(
+                        SizedBox(height: 16),
+                        Text(
                           'No products available',
                           style: TextStyle(
                             fontSize: 18,
@@ -718,8 +718,8 @@ class _HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        const SizedBox(height: 8),
-                        const Text(
+                        SizedBox(height: 8),
+                        Text(
                           'Check back later for new products!',
                           style: TextStyle(
                             fontSize: 14,
