@@ -44,8 +44,8 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 // Header
                 Column(
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       'Welcome Back',
                       style: TextStyle(
                         fontSize: 32,
@@ -53,8 +53,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Color(0xFF8B5CF6),
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Text(
+                    const SizedBox(height: 8),
+                    const Text(
                       'Sign in to your account to continue shopping',
                       style: TextStyle(
                         fontSize: 16,
@@ -141,7 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             _obscurePassword
                                 ? Icons.visibility_outlined
                                 : Icons.visibility_off_outlined,
-                            color: Color(0xFF9CA3AF),
+                            color: const Color(0xFF9CA3AF),
                             size: 20,
                           ),
                           onPressed: () {
@@ -183,9 +183,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       padding:
                           const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                       decoration: BoxDecoration(
-                        color: Color(0xFFFEE2E2),
+                        color: const Color(0xFFFEE2E2),
                         borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: Color(0xFFFCA5A5)),
+                        border: Border.all(color: const Color(0xFFFCA5A5)),
                       ),
                       child: Row(
                         children: [
