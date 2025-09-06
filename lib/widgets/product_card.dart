@@ -18,7 +18,7 @@ class ProductCard extends StatelessWidget {
         minWidth: 200,
         maxWidth: 320,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
@@ -37,9 +37,9 @@ class ProductCard extends StatelessWidget {
             aspectRatio: 1.2,
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                color: const Color(0xFFF8F9FA),
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                color: Color(0xFFF8F9FA),
               ),
               child: ClipRRect(
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
@@ -156,9 +156,9 @@ class ProductCard extends StatelessWidget {
       return Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
-          color: const Color(0xFFF8F9FA),
-          borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+        decoration: const BoxDecoration(
+          color: Color(0xFFF8F9FA),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
         ),
         child: ClipRRect(
           borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
