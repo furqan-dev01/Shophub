@@ -42,12 +42,13 @@ class ProductCard extends StatelessWidget {
                 color: Color(0xFFF8F9FA),
               ),
               child: ClipRRect(
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(16)),
                 child: _buildProductImage(),
               ),
             ),
           ),
-          
+
           // Product Details
           Padding(
             padding: const EdgeInsets.all(16),
@@ -65,9 +66,9 @@ class ProductCard extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
-                
+
                 const SizedBox(height: 6),
-                
+
                 // Rating
                 Row(
                   children: [
@@ -87,9 +88,9 @@ class ProductCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                
+
                 const SizedBox(height: 8),
-                
+
                 // Description
                 Text(
                   product.description,
@@ -101,9 +102,9 @@ class ProductCard extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
-                
+
                 const SizedBox(height: 12),
-                
+
                 // Price and Add to Cart Button
                 Row(
                   children: [
@@ -124,7 +125,8 @@ class ProductCard extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF8B5CF6),
                           foregroundColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 8),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
@@ -150,8 +152,9 @@ class ProductCard extends StatelessWidget {
 
   Widget _buildProductImage() {
     // Check if imageUrl is a valid URL (starts with http)
-    if (product.imageUrl.isNotEmpty && 
-        (product.imageUrl.startsWith('http://') || product.imageUrl.startsWith('https://'))) {
+    if (product.imageUrl.isNotEmpty &&
+        (product.imageUrl.startsWith('http://') ||
+            product.imageUrl.startsWith('https://'))) {
       // Display image from URL
       return Container(
         width: double.infinity,
@@ -177,9 +180,11 @@ class ProductCard extends StatelessWidget {
                     children: [
                       CircularProgressIndicator(
                         value: loadingProgress.expectedTotalBytes != null
-                            ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes!
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes!
                             : null,
-                        valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF8B5CF6)),
+                        valueColor: const AlwaysStoppedAnimation<Color>(
+                            Color(0xFF8B5CF6)),
                         strokeWidth: 2,
                       ),
                       const SizedBox(height: 8),

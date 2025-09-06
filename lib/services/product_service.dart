@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/product.dart';
 
@@ -8,10 +7,7 @@ class ProductService {
 
   // Get all products from Firestore
   static Stream<List<Product>> getAllProducts() {
-    return _firestore
-        .collection(_collectionName)
-        .snapshots()
-        .map((snapshot) {
+    return _firestore.collection(_collectionName).snapshots().map((snapshot) {
       return snapshot.docs.map((doc) {
         return Product.fromMap(doc.data(), doc.id);
       }).toList();
@@ -37,7 +33,8 @@ class ProductService {
       const Product(
         id: '1',
         name: 'Premium Wireless Headphones',
-        description: 'High-quality wireless headphones with noise cancellation and premium audio quality.',
+        description:
+            'High-quality wireless headphones with noise cancellation and premium audio quality.',
         price: 299.99,
         rating: 4.8,
         imageUrl: 'assets/images/headphones.png',
@@ -46,7 +43,8 @@ class ProductService {
       const Product(
         id: '2',
         name: 'Smart Watch Pro',
-        description: 'Advanced smartwatch with health monitoring, GPS, and premium build quality.',
+        description:
+            'Advanced smartwatch with health monitoring, GPS, and premium build quality.',
         price: 399.99,
         rating: 4.7,
         imageUrl: 'assets/images/smartwatch.png',
@@ -55,7 +53,8 @@ class ProductService {
       const Product(
         id: '3',
         name: 'Ultra Laptop',
-        description: 'Powerful ultrabook with premium design, long battery life, and high performance.',
+        description:
+            'Powerful ultrabook with premium design, long battery life, and high performance.',
         price: 1299.99,
         rating: 4.9,
         imageUrl: 'assets/images/laptop.png',
@@ -64,7 +63,8 @@ class ProductService {
       const Product(
         id: '4',
         name: 'Wireless Speaker',
-        description: 'Portable wireless speaker with exceptional sound quality and long battery life.',
+        description:
+            'Portable wireless speaker with exceptional sound quality and long battery life.',
         price: 199.99,
         rating: 4.6,
         imageUrl: 'assets/images/speaker.png',
@@ -86,7 +86,10 @@ class ProductService {
   // Update a product in Firestore
   static Future<void> updateProduct(String productId, Product product) async {
     try {
-      await _firestore.collection(_collectionName).doc(productId).update(product.toMap());
+      await _firestore
+          .collection(_collectionName)
+          .doc(productId)
+          .update(product.toMap());
     } catch (e) {
       // Error updating product: $e
       rethrow;

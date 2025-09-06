@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'login_screen.dart';
@@ -71,7 +70,8 @@ class _SignupScreenState extends State<SignupScreen> {
         context: context,
         builder: (context) => AlertDialog(
           title: const Text('Verify Your Email'),
-          content: const Text('A verification link has been sent to your email. Please check your inbox or spam folder to verify your account.'),
+          content: const Text(
+              'A verification link has been sent to your email. Please check your inbox or spam folder to verify your account.'),
           actions: [
             TextButton(
               onPressed: () {
