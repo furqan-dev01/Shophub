@@ -687,10 +687,10 @@ class _HomePageState extends State<HomePage> {
                             setState(() {}); // Refresh the stream
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF8B5CF6),
+                            backgroundColor: Color(0xFF8B5CF6),
                             foregroundColor: Colors.white,
                           ),
-                          child: const Text('Retry'),
+                          child: Text('Retry'),
                         ),
                       ],
                     ),
