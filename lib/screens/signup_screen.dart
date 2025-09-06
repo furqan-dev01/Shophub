@@ -75,10 +75,7 @@ class _SignupScreenState extends State<SignupScreen> {
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
-                );
+                Navigator.pop(context);
               },
               child: const Text('OK'),
             ),

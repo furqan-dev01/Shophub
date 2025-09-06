@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // Center section - Welcome message when logged in, empty when not
-            if (isLoggedIn && user != null) ...[
+            if (isLoggedIn && user != null && MediaQuery.of(context).size.width > 600) ...[
               Expanded(
                 child: Center(
                   child: RichText(
