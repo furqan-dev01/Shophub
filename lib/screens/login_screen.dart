@@ -44,8 +44,8 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 // Header
                 Column(
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       'Welcome Back',
                       style: TextStyle(
                         fontSize: 32,
@@ -53,8 +53,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Color(0xFF8B5CF6),
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Text(
+                    const SizedBox(height: 8),
+                    const Text(
                       'Sign in to your account to continue shopping',
                       style: TextStyle(
                         fontSize: 16,
@@ -64,13 +64,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
 
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
 
                 // Email Field
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Email',
                       style: TextStyle(
                         fontSize: 14,
@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Color(0xFF374151),
                       ),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     TextField(
                       controller: _emailController,
                       decoration: InputDecoration(
@@ -111,13 +111,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
 
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
 
                 // Password Field
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Password',
                       style: TextStyle(
                         fontSize: 14,
@@ -125,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Color(0xFF374151),
                       ),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     TextField(
                       controller: _passwordController,
                       obscureText: _obscurePassword,
@@ -173,15 +173,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
 
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
 
                 // Error Message
                 if (_errorMessage != null)
                   Padding(
-                    padding: EdgeInsets.only(bottom: 16),
+                    padding: const EdgeInsets.only(bottom: 16),
                     child: Container(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                       decoration: BoxDecoration(
                         color: Color(0xFFFEE2E2),
                         borderRadius: BorderRadius.circular(8),
@@ -189,19 +189,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       child: Row(
                         children: [
-                          Icon(Icons.error_outline, color: Color(0xFFDC2626)),
-                          SizedBox(width: 12),
+                          const Icon(Icons.error_outline, color: Color(0xFFDC2626)),
+                          const SizedBox(width: 12),
                           Expanded(
                             child: Text(
                               _errorMessage!,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Color(0xFFDC2626),
                                 fontSize: 14,
                               ),
                             ),
                           ),
                           IconButton(
-                            icon: Icon(Icons.close,
+                            icon: const Icon(Icons.close,
                                 color: Color(0xFFDC2626), size: 16),
                             onPressed: () {
                               setState(() {
@@ -218,14 +218,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 ElevatedButton(
                   onPressed: _isLoading ? null : _signIn,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF8B5CF6),
+                    backgroundColor: const Color(0xFF8B5CF6),
                     foregroundColor: Colors.white,
-                    padding: EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
                     elevation: 0,
-                    disabledBackgroundColor: Color(0xFFD1D5DB),
+                    disabledBackgroundColor: const Color(0xFFD1D5DB),
                   ),
                   child: _isLoading
                       ? const SizedBox(
@@ -245,15 +245,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                 ),
 
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
 
                 // Sign Up Link
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Don't have an account? ",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 14,
                         color: Color(0xFF6B7280),
                       ),

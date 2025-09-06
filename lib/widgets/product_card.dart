@@ -41,8 +41,8 @@ class ProductCard extends StatelessWidget {
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
                 color: const Color(0xFFF8F9FA),
               ),
-              child: ClipRRect(
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+              child: const ClipRRect(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
                 child: _buildProductImage(),
               ),
             ),
@@ -209,15 +209,15 @@ class ProductCard extends StatelessWidget {
   }
 
   Widget _buildFallbackImage() {
-    return Container(
+    return const Container(
       width: double.infinity,
       height: double.infinity,
-      color: const Color(0xFFF8F9FA),
+      color: Color(0xFFF8F9FA),
       child: Center(
         child: Icon(
           _getProductIcon(),
           size: 50,
-          color: const Color(0xFF8B5CF6),
+          color: Color(0xFF8B5CF6),
         ),
       ),
     );
